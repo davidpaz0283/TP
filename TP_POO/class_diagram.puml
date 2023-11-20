@@ -14,6 +14,27 @@ class estadisticas.Team {
 + int getGoalCounter()
 + void setGoalCounter(int)
 }
+class estadisticas.Season {
+- String name
+- Date startDate
+- Date finishDate
+- ArrayList<Team> teams
+- ArrayList<Match> matches
++ String getName()
++ void setName(String)
++ Date getStartDate()
++ void setStartDate(Date)
++ Date getFinishDate()
++ void setFinishDate(Date)
++ void addTeam(Team)
++ void removeTeam(Team)
++ ArrayList<Team> getTeams()
++ void setTeams(ArrayList<Team>)
++ void addMatch(Match)
++ void removeMatch(Match)
++ ArrayList<Match> getMatches()
++ void setMatches(ArrayList<Match>)
+}
 class estadisticas.Player {
 - String name
 - int number
@@ -34,7 +55,22 @@ class estadisticas.Player {
 class Main {
 + {static} void main(String[])
 }
+class estadisticas.Match {
+- Date date
+- int visitantGoals
+- int localGoals
++ Date getDate()
++ void setDate(Date)
++ int getVisitantGoals()
++ void setVisitantGoals(int)
++ void incrementVisitantGoals()
++ int getLocalGoals()
++ void setLocalGoals(int)
++ void incrementLocalGoals()
+}
 
 estadisticas.Team o-- estadisticas.Player
+
+estadisticas.Season o-- estadisticas.Team
 
 @enduml
