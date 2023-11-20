@@ -8,6 +8,7 @@ public class Season {
     private Date startDate;
     private Date finishDate;
     private ArrayList<Team> teams;
+    private ArrayList<Match> matches;
 
     public String getName() {
         return name;
@@ -46,5 +47,20 @@ public class Season {
 
     public void setTeams(ArrayList<Team> teams) {
         this.teams = teams;
+    }
+
+    public void addMatch(Match match){
+
+    }
+
+    public void removeMatch(Match match){
+
+    }
+    public ArrayList<Match> getMatches() {
+        return matches;
+    }
+
+    public void setMatches(ArrayList<Match> matches) {
+        this.matches = matches;
     }
 }

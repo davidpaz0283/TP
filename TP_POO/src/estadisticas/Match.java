@@ -35,6 +35,6 @@ public class Match {
     }
 
     public void incrementLocalGoals(){
-        
+
     }
 }
