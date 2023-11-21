@@ -7,6 +7,17 @@ public class Player {
     private int goalCounter;
     private Team team;
 
+    public Player(){
+
+    }
+
+    public Player(String name, int number, String position, Team team){
+        this.setName(name);
+        this.setNumber(number);
+        this.setPosition(position);
+        this.setTeam(team);
+    }
+
     public String getName() {
         return name;
     }
