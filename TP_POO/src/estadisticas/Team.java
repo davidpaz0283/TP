@@ -7,7 +7,15 @@ public class Team {
     private int tableScore;
     private int goalCounter;
 
-
+    public Team(){
+        this.players = new ArrayList<Player>();
+    }
+    public Team(String name, int goalCounter, int tableScore){
+        this.players = new ArrayList<Player>();
+        this.setName(name);
+        this.setGoalCounter(goalCounter);
+        this.setTableScore(tableScore);
+    }
     public String getName() {
         return name;
     }
@@ -41,5 +49,7 @@ public class Team {
 
     public void setGoalCounter(int goalCounter) {
         this.goalCounter = goalCounter;
+
+
     }
 }
