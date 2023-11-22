@@ -9,10 +9,12 @@ public class Main {
         Player dimaria = new Player("Angel Di Maria", 7, "Delantero", argentina);
         Player messi = new Player("Lionel Messi", 10, "Delantero", argentina);
         Player dibu = new Player("Emiliano Martinez", 1, "Arquero", argentina);
+        Player dePaul = new Player("Rodrigo De Paul", 8, "Medio Campista", argentina);
 
         messi.getTeam().getPlayers().add(messi);
         dimaria.getTeam().getPlayers().add(dimaria);
         dibu.getTeam().getPlayers().add(dibu);
+        dePaul.getTeam().getPlayers().add(dePaul);
 
 
         argentina.showPlayersList();
