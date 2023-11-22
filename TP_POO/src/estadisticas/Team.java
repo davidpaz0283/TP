@@ -29,10 +29,10 @@ public class Team {
     }
 
     public void addPlayer(Player player) {
-
+        getPlayers().add(player);
     }
     public void removePlayer (Player player){
-
+        getPlayers().remove(player);
     }
 
     public int getTableScore() {
@@ -48,8 +48,18 @@ public class Team {
     }
 
     public void setGoalCounter(int goalCounter) {
-        this.goalCounter = goalCounter;
+        this.goalCounter = goalCounter;}
 
+    public void showPlayersList(){
+        int lenght = this.getPlayers().size();
+        String message = "En  %s hay %d jugadores\n";
+        System.out.println(
+                String.format(message,getName(),lenght));
 
+        getPlayers().forEach(player -> {
+            String playerText = player.getName()+ " " + player.getGoalCounter();
+           System.out.println(player.getName());
+
+        });
     }
 }
