@@ -8,6 +8,8 @@ public class Main {
 
         Player messi = new Player("Lionel Messi", 10, "Delantero", argentina);
 
+        messi.getTeam().getPlayers().add(messi);
+
         System.out.println(messi.getTeam().getName());
 
     }
