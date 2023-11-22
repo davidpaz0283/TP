@@ -14,7 +14,7 @@ public class Main {
         dimaria.getTeam().getPlayers().add(dimaria);
         dibu.getTeam().getPlayers().add(dibu);
 
-        
+
         argentina.showPlayersList();
     }
 }

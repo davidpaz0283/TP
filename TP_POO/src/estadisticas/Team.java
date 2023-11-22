@@ -52,7 +52,14 @@ public class Team {
 
     public void showPlayersList(){
         int lenght = this.getPlayers().size();
-        String message = "En " + this.getName() + " hay " + lenght + " jugadores";
-        System.out.println(message);
+        String message = "En  %s hay %d jugadores\n";
+        System.out.println(
+                String.format(message,getName(),lenght));
+
+        getPlayers().forEach(player -> {
+            String playerText = player.getName()+ " " + player.getGoalCounter();
+           System.out.println(player.getName());
+
+        });
     }
 }
