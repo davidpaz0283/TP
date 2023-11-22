@@ -7,15 +7,16 @@ public class Player {
     private int goalCounter;
     private Team team;
 
-    public Player(){
+    public Player() {
 
     }
 
-    public Player(String name, int number, String position, Team team){
+    public Player(String name, int number, String position, Team team) {
         this.setName(name);
         this.setNumber(number);
         this.setPosition(position);
         this.setTeam(team);
+        this.addToTeamList();
     }
 
     public String getName() {
@@ -57,5 +58,24 @@ public class Player {
     public void setTeam(Team team) {
         this.team = team;
     }
-}
+
+    public void addToTeamList(Team team) {
+        if (this.getTeam() == null) {
+            team.addPlayer(this);
+        } else {
+            this
+                    .getTeam()
+                    .getPlayers()
+                    .add(this);
+        }
+    }
+        public void addToTeamList() {
+            if (this.getTeam() == null) return;
+
+            this
+                    .getTeam().
+                    getPlayers().
+                    add(this);
+        }
+    }
 
