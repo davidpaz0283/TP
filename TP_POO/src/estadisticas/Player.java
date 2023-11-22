@@ -16,6 +16,7 @@ public class Player {
         this.setNumber(number);
         this.setPosition(position);
         this.setTeam(team);
+        this.addToTeamList();
     }
 
     public String getName() {
