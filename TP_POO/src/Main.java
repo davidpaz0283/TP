@@ -19,17 +19,14 @@ public class Main {
         Player lloris = new Player("Hugo Lloris", 1, "Arquero", francia);
 
         argentina.showPlayersList();
-        francia.showPlayersList();
 
-        Match finalMatch = new Match();
-        finalMatch.setLocalTeam(argentina);
-        finalMatch.setVisitantTeam(francia);
+        Match finalMatch = new Match(argentina, francia);
 
         finalMatch.incrementLocalGoals();
         finalMatch.incrementVisitantGoals();
         finalMatch.incrementLocalGoals();
 
 
-        
+
     }
 }
