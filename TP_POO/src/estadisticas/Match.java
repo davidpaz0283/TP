@@ -5,6 +5,8 @@ public class Match {
     private Date date;
     private int visitantGoals;
     private int localGoals;
+    private Team visitantTeam;
+    private Team localTeam;
 
     public Date getDate() {
         return date;
@@ -23,7 +25,7 @@ public class Match {
     }
 
     public void incrementVisitantGoals(){
-
+    setVisitantGoals(getVisitantGoals()+1);
     }
 
     public int getLocalGoals() {
@@ -35,6 +37,22 @@ public class Match {
     }
 
     public void incrementLocalGoals(){
+    setLocalGoals(getLocalGoals()+1);
+    }
 
+    public Team getVisitantTeam() {
+        return visitantTeam;
+    }
+
+    public void setVisitantTeam(Team visitantTeam) {
+        this.visitantTeam = visitantTeam;
+    }
+
+    public Team getLocalTeam() {
+        return localTeam;
+    }
+
+    public void setLocalTeam(Team localTeam) {
+        this.localTeam = localTeam;
     }
 }
