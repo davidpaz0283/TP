@@ -1,6 +1,7 @@
 package estadisticas;
 
 import java.util.Date;
+
 public class Match {
     private Date date;
     private int visitantGoals;
@@ -8,10 +9,11 @@ public class Match {
     private Team visitantTeam;
     private Team localTeam;
 
-    public Match(Team localTeam, Team visitantTeam){
+    public Match(Team localTeam, Team visitantTeam) {
         setLocalTeam(localTeam);
         setVisitantTeam(visitantTeam);
     }
+
     public Date getDate() {
         return date;
     }
@@ -29,7 +31,7 @@ public class Match {
     }
 
     public void incrementVisitantGoals(){
-    setVisitantGoals(getVisitantGoals()+1);
+        setVisitantGoals(getVisitantGoals() + 1);
     }
 
     public int getLocalGoals() {
@@ -40,8 +42,8 @@ public class Match {
         this.localGoals = localGoals;
     }
 
-    public void incrementLocalGoals(){
-    setLocalGoals(getLocalGoals()+1);
+    public void incrementLocalGoals() {
+        setLocalGoals(getLocalGoals() + 1); //this.localGoals ++;
     }
 
     public Team getVisitantTeam() {

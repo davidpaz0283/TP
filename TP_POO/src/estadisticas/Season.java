@@ -1,8 +1,8 @@
 package estadisticas;
 
-import  java.util.ArrayList;
+import java.util.ArrayList;
+import java.util.Date;
 
-import  java.util.Date;
 public class Season {
     private String name;
     private Date startDate;
@@ -10,9 +10,10 @@ public class Season {
     private ArrayList<Team> teams;
     private ArrayList<Match> matches;
 
-    public Season(){
+    public Season() {
         setTeams(new ArrayList<>());
     }
+
 
     public String getName() {
         return name;
@@ -39,12 +40,11 @@ public class Season {
     }
 
     public void addTeam(Team team){
-    getTeams().add(team);
+        getTeams().add(team);
     }
-
     public void removeTeam(Team team){
-
     }
+
     public ArrayList<Team> getTeams() {
         return teams;
     }
@@ -52,14 +52,11 @@ public class Season {
     public void setTeams(ArrayList<Team> teams) {
         this.teams = teams;
     }
-
     public void addMatch(Match match){
-
     }
-
     public void removeMatch(Match match){
-
     }
+
     public ArrayList<Match> getMatches() {
         return matches;
     }

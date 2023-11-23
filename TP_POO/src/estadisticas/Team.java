@@ -1,21 +1,30 @@
 package estadisticas;
 
-import  java.util.ArrayList;
+import java.util.ArrayList;
+
 public class Team {
     private String name;
     private ArrayList<Player> players;
     private int tableScore;
     private int goalCounter;
 
-    public Team(String argentina){
+    public Team() {
         this.players = new ArrayList<Player>();
     }
-    public Team(String name, int goalCounter, int tableScore){
+
+    public Team(String name) {
+        this.players = new ArrayList<Player>();
+        this.setName(name);
+    }
+
+    public Team(String name, int goalCounter, int tableScore) {
         this.players = new ArrayList<Player>();
         this.setName(name);
         this.setGoalCounter(goalCounter);
         this.setTableScore(tableScore);
     }
+
+
     public String getName() {
         return name;
     }
@@ -31,7 +40,8 @@ public class Team {
     public void addPlayer(Player player) {
         getPlayers().add(player);
     }
-    public void removePlayer (Player player){
+
+    public void removePlayer(Player player) {
         getPlayers().remove(player);
     }
 
@@ -48,18 +58,18 @@ public class Team {
     }
 
     public void setGoalCounter(int goalCounter) {
-        this.goalCounter = goalCounter;}
+        this.goalCounter = goalCounter;
+    }
 
-    public void showPlayersList(){
+    public void showPlayersList() {
         int lenght = this.getPlayers().size();
-        String message = "En  %s hay %d jugadores\n";
+        String message = "En %s hay %d jugadores\n";
         System.out.println(
-                String.format(message,getName(),lenght));
-
+                String.format(message,getName(),lenght)
+        );
         getPlayers().forEach(player -> {
-            String playerText = player.getName()+ " " + player.getGoalCounter();
-           System.out.println(player.getName());
-
+            String playerText = player.getName() + " " + player.getGoalCounter();
+            System.out.println(playerText);
         });
     }
 }

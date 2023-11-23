@@ -60,22 +60,20 @@ public class Player {
     }
 
     public void addToTeamList(Team team) {
-        if (this.getTeam() == null) {
+        if(this.getTeam() == null) {
             team.addPlayer(this);
         } else {
             this
-                    .getTeam()
-                    .getPlayers()
-                    .add(this);
+                    .getTeam()    //Team
+                    .getPlayers() //ArrayList<Player>
+                    .add(this);  //add(Player)
         }
-    }
-        public void addToTeamList() {
-            if (this.getTeam() == null) return;
 
-            this
-                    .getTeam().
-                    getPlayers().
-                    add(this);
-        }
+
+    }
+    public void addToTeamList() {
+        if(this.getTeam() == null) return;
+        getTeam().addPlayer(this);
     }
 
+}
