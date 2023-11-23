@@ -8,17 +8,19 @@ public class Main {
         Team argentina = new Team("Argentina", 2, 3);
         Team francia = new Team("Francia", 1, 0);
 
-        Player fideo = new Player("Angel Di Maria", 7, "Delantero", argentina);
-        Player pulga = new Player("Lionel Messi", 10, "Delantero", argentina);
-        Player dibu = new Player("Emiliano Martinez", 1, "Arquero", argentina);
-        Player taglia = new Player("Nicolas Tagliafico", 3, "Defensor", argentina);
-        Player dePaul = new Player("Rodrigo De Paul", 8, "Medio Campista", argentina);
+         new Player("Angel Di Maria", 7, "Delantero", argentina);
+         new Player("Lionel Messi", 10, "Delantero", argentina);
+         new Player("Emiliano Martinez", 1, "Arquero", argentina);
+         new Player("Nicolas Tagliafico", 3, "Defensor", argentina);
+         new Player("Rodrigo De Paul", 8, "Medio Campista", argentina);
 
-        Player mbappe = new Player("Kylian Mbappe", 7, "Delantero", francia);
-        Player griezman = new Player("Antoine Griezman", 7, "Delantero", francia);
-        Player lloris = new Player("Hugo Lloris", 1, "Arquero", francia);
+        new Player("Kylian Mbappe", 7, "Delantero", francia);
+        new Player("Antoine Griezman", 7, "Delantero", francia);
+        new Player("Hugo Lloris", 1, "Arquero", francia);
 
         argentina.showPlayersList();
+        
+        francia.showPlayersList();
 
         Match finalMatch = new Match(argentina, francia);
 
