@@ -21,12 +21,13 @@ public class Main {
 
     public static void main(String[] args) {
         Season faseGrupoMundial = new Season();
-        Team argentina = new Team("Argentina", 4, 3);
-        Team francia = new Team("Francia", 0, 0);
 
-        faseGrupoMundial.addTeam(argentina);
-        faseGrupoMundial.addTeam(francia);
+        faseGrupoMundial.addTeam(new Team("Argentina"));
+        faseGrupoMundial.addTeam(new Team("Francia"));
+        faseGrupoMundial.addTeam(new Team("Alemania"));
 
+        ArrayList<Team> countries = faseGrupoMundial.getTeams();
+        
         String[][] jugadoresArgentina = generatePlayer();
         String[][] jugadoresFrancia = generatePlayer();
 
