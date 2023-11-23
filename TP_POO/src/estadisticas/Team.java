@@ -7,7 +7,7 @@ public class Team {
     private int tableScore;
     private int goalCounter;
 
-    public Team(){
+    public Team(String argentina){
         this.players = new ArrayList<Player>();
     }
     public Team(String name, int goalCounter, int tableScore){
