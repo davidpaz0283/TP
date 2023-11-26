@@ -9,6 +9,11 @@ public class Match {
     private Team visitantTeam;
     private Team localTeam;
 
+    public Match(Team localTeam, Team visitantTeam) {
+        setLocalTeam(localTeam);
+        setVisitantTeam(visitantTeam);
+    }
+
     public Date getDate() {
         return date;
     }
@@ -26,7 +31,7 @@ public class Match {
     }
 
     public void incrementVisitantGoals(){
-
+        setVisitantGoals(getVisitantGoals() + 1);
     }
 
     public int getLocalGoals() {
@@ -38,7 +43,7 @@ public class Match {
     }
 
     public void incrementLocalGoals() {
-
+        setLocalGoals(getLocalGoals() + 1); //this.localGoals ++;
     }
 
     public Team getVisitantTeam() {
@@ -56,4 +61,16 @@ public class Match {
     public void setLocalTeam(Team localTeam) {
         this.localTeam = localTeam;
     }
+
+    public boolean isLocalWinner() {
+        return getLocalGoals() > getVisitantGoals();
+    }
+    public boolean isVisitantWinner() {
+        return getLocalGoals() < getVisitantGoals();
+    }
+
+    public boolean tieMatch() {
+        return getVisitantGoals() == getVisitantGoals();
+    }
+
 }
