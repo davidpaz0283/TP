@@ -18,6 +18,9 @@ public class Main {
     public static void main(String[] args) {
         Llave cuartosDeFinalMundial = new Llave(); //
 
+        cuartosDeFinalMundial.addTeam(new Team("Croacia"));
+        cuartosDeFinalMundial.addTeam(new Team("Brasil"));
+
         cuartosDeFinalMundial.addTeam(new Team("Paises Bajos"));
         cuartosDeFinalMundial.addTeam(new Team("Argentina"));
 
@@ -26,9 +29,6 @@ public class Main {
 
         cuartosDeFinalMundial.addTeam(new Team("Marruecos"));
         cuartosDeFinalMundial.addTeam(new Team("Portugal"));
-
-        cuartosDeFinalMundial.addTeam(new Team("Brail"));
-        cuartosDeFinalMundial.addTeam(new Team("Croacia"));
 
 
         ArrayList<Team> countries = cuartosDeFinalMundial.getTeams();
@@ -59,21 +59,34 @@ public class Main {
 
         Match cuartos1 = cuartosDeFinalMundial.getMatches().get(0);
         cuartos1.incrementLocalGoals();
+        cuartos1.incrementLocalGoals();
+        cuartos1.incrementLocalGoals();
+        cuartos1.incrementLocalGoals();
+        cuartos1.incrementLocalGoals();
+        cuartos1.incrementVisitantGoals();
         cuartos1.incrementVisitantGoals();
         cuartos1.incrementVisitantGoals();
 
         Match cuartos2 = cuartosDeFinalMundial.getMatches().get(1);
         cuartos2.incrementLocalGoals();
+        cuartos2.incrementLocalGoals();
+        cuartos2.incrementLocalGoals();
+        cuartos2.incrementLocalGoals();
+        cuartos2.incrementLocalGoals();
+        cuartos2.incrementVisitantGoals();
+        cuartos2.incrementVisitantGoals();
+        cuartos2.incrementVisitantGoals();
+        cuartos2.incrementVisitantGoals();
         cuartos2.incrementVisitantGoals();
         cuartos2.incrementVisitantGoals();
 
         Match cuartos3 = cuartosDeFinalMundial.getMatches().get(2);
         cuartos3.incrementLocalGoals();
-
-        Match cuartos4 = cuartosDeFinalMundial.getMatches().get(2);
-        cuartos4.incrementLocalGoals();
-        cuartos4.incrementLocalGoals();
         cuartos3.incrementVisitantGoals();
+        cuartos3.incrementVisitantGoals();
+
+        Match cuartos4 = cuartosDeFinalMundial.getMatches().get(3);
+        cuartos4.incrementLocalGoals();
 
         cuartosDeFinalMundial.getNextStepTeams().forEach(team -> {
             team.showPlayersList();
