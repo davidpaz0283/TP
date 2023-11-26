@@ -10,10 +10,6 @@ public class Season {
     private ArrayList<Team> teams;
     private ArrayList<Match> matches;
 
-    public Season() {
-        setTeams(new ArrayList<>());
-    }
-
 
     public String getName() {
         return name;
@@ -40,7 +36,6 @@ public class Season {
     }
 
     public void addTeam(Team team){
-        getTeams().add(team);
     }
     public void removeTeam(Team team){
     }
