@@ -3,7 +3,7 @@ package estadisticas;
 import java.util.ArrayList;
 import java.util.Date;
 
-public abstract class Season {
+public class Season {
     private String name;
     private Date startDate;
     private Date finishDate;
@@ -11,8 +11,7 @@ public abstract class Season {
     private ArrayList<Match> matches;
 
     public Season() {
-        setTeams(new ArrayList<Team>());
-        setMatches(new ArrayList<Match>());
+        setTeams(new ArrayList<>());
     }
 
 
@@ -54,7 +53,6 @@ public abstract class Season {
         this.teams = teams;
     }
     public void addMatch(Match match){
-        getMatches().add(match);
     }
     public void removeMatch(Match match){
     }
@@ -66,6 +64,4 @@ public abstract class Season {
     public void setMatches(ArrayList<Match> matches) {
         this.matches = matches;
     }
-
-    abstract public ArrayList<Team> getNextStepTeams();
 }
